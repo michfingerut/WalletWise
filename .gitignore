@@ -9,4 +9,6 @@
 !**.js
 !**.vue
 !**.sh
+!.env
+!.json
 
