@@ -1,0 +1,12 @@
+#Ignore
+*
+
+#Exclude
+!**/
+!*.gitignore
+!**.md
+!**.html
+!**.js
+!**.vue
+!**.sh
+
