@@ -17,6 +17,7 @@ import sequalize from './db/index.js';
 
 const app = express();
 app.get('/hello', (req, res) => {
+  logger.info('someone send hello!');
   res.status(200).json('hello!!');
 });
 
