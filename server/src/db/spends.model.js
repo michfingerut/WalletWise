@@ -23,8 +23,6 @@ const Spends = sequelize.define('spends', {
     }),
     allowNull: false,
   },
-  modelName: 'spends',
-  timestamps: true,
 });
 
 export default Spends;

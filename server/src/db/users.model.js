@@ -3,6 +3,12 @@ import { DataTypes } from 'sequelize';
 import sequelize from './sequalize.js';
 
 const Users = sequelize.define('users', {
+  uuid: {
+    //TODO for some reason doesnt create it
+    type: DataTypes.UUID,
+    primaryKey: true,
+    defaultValue: DataTypes.UUIDV4,
+  },
   firstName: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -19,9 +25,6 @@ const Users = sequelize.define('users', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
-  modelName: 'users',
-  timestamps: true,
 });
 
 export default Users;
