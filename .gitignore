@@ -1,5 +1,7 @@
 #Ignore
 *
+/server/node_modules/*
+/server/node_modules
 
 #Exclude
 !**/
