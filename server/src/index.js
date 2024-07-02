@@ -1,5 +1,8 @@
-import logger from './logger.js';
 import express from 'express';
+
+import logger from './logger.js';
+import router from './routes.js';
+import sequalize from './db/index.js';
 
 //const startServer = () => {
 //   const port = 3001; //TODO: env
@@ -13,9 +16,11 @@ import express from 'express';
 // startServer();
 
 const app = express();
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
   res.status(200).json('hello!!');
 });
+
+app.use('/', router);
 
 app.listen(3001, () => {
   logger.info('server is running on port 3001');
